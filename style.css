@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap');
+*{
+  margin: 5px;
+  font-size: 60px;
+  font-family: 'Work Sans', sans-serif;
+  cursor: default;
+}
+
+
+/*텍스트 블럭 속성*/
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: inline-block;
+  color:gray;/* For Firefox */
+}
+
+
+/*텍스트 블럭 안에 있는 글자 스타일*/
+div[contenteditable=true] {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font: unset;
+  color: unset;
+  outline: none;
+  color:black;
+  display: inline-block;
+  cursor: text;
+}
+
+
+/* a 태그 */
+
+
+a {
+  color: black;
+  text-decoration: none;
+  outline: none
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: gray;
+}
+
+
+/* 마우스 오버시의 속성 */
+
+a.tip {
+  text-decoration:none;
+  color: black;
+}
+
+/* 텍스트의 주변에 이미지 배치
+a.tip:hover {
+    position: relative;
+}
+*/
+
+a.tip img {
+    display: none
+}
+
+a.tip:hover img {
+    display: block;
+    z-index: -100;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+}
+
+
+/*button*/
+.button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 50px;
+}
